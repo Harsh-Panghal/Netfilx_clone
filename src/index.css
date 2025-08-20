@@ -8,55 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Gradient & Duotone Color Palette */
-    --background: 220 25% 8%;
-    --foreground: 60 30% 96%;
+    /* 3D Design Color Palette */
+    --background: 220 15% 12%;
+    --foreground: 220 8% 95%;
 
-    --card: 220 20% 12%;
-    --card-foreground: 60 25% 96%;
+    --card: 220 10% 18%;
+    --card-foreground: 220 8% 92%;
 
-    --popover: 220 20% 12%;
-    --popover-foreground: 60 25% 96%;
+    --popover: 220 10% 18%;
+    --popover-foreground: 220 8% 92%;
 
-    /* Primary: Warm Orange */
-    --primary: 25 95% 60%;
-    --primary-foreground: 220 25% 8%;
-    --primary-light: 35 95% 75%;
-    --primary-dark: 15 95% 45%;
+    /* Primary: Deep Steel Blue */
+    --primary: 210 40% 55%;
+    --primary-foreground: 220 15% 12%;
+    --primary-light: 210 45% 65%;
+    --primary-dark: 210 35% 45%;
 
-    /* Secondary: Cool Blue */
-    --secondary: 220 90% 65%;
-    --secondary-foreground: 220 25% 8%;
-    --secondary-light: 230 90% 80%;
-    --secondary-dark: 210 90% 50%;
+    /* Secondary: Warm Copper */
+    --secondary: 25 30% 50%;
+    --secondary-foreground: 220 15% 12%;
+    --secondary-light: 25 35% 60%;
+    --secondary-dark: 25 25% 40%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 60 15% 75%;
+    --muted: 220 8% 25%;
+    --muted-foreground: 220 5% 70%;
 
-    --accent: 280 70% 70%;
-    --accent-foreground: 220 25% 8%;
+    --accent: 260 25% 60%;
+    --accent-foreground: 220 15% 12%;
 
-    --destructive: 0 85% 65%;
-    --destructive-foreground: 220 25% 8%;
+    --destructive: 0 60% 55%;
+    --destructive-foreground: 220 15% 12%;
 
-    --border: 220 20% 25%;
-    --input: 220 25% 15%;
-    --ring: 25 95% 60%;
+    --border: 220 8% 30%;
+    --input: 220 12% 15%;
+    --ring: 210 40% 55%;
 
-    /* Design System */
-    --radius: 1rem;
-    --shadow-soft: 0 8px 32px rgba(255, 138, 76, 0.15);
-    --shadow-duotone: 0 8px 32px rgba(255, 138, 76, 0.2), 0 0 0 1px rgba(96, 165, 250, 0.1);
-    --shadow-gradient: 0 20px 40px -12px rgba(255, 138, 76, 0.25), 0 0 0 1px rgba(96, 165, 250, 0.05);
-    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    /* 3D Design System */
+    --radius: 0.75rem;
+    --shadow-3d-soft: 0 4px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-3d-medium: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    --shadow-3d-deep: 0 12px 24px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    --shadow-3d-inset: inset 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(0, 0, 0, 0.15);
+    --shadow-3d-raised: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    --transition-3d: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
-    --gradient-button: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 50%, hsl(var(--secondary)) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);
-    --gradient-duotone: linear-gradient(45deg, hsl(var(--primary)) 0%, transparent 50%, hsl(var(--secondary)) 100%);
+    /* 3D Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 50%, hsl(var(--secondary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 50%, hsl(var(--card)) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(var(--primary-light)) 0%, hsl(var(--primary)) 50%, hsl(var(--primary-dark)) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--card)) 50%, hsl(var(--background)) 100%);
+    --gradient-3d: linear-gradient(135deg, hsl(var(--primary-light)) 0%, hsl(var(--primary)) 30%, hsl(var(--primary-dark)) 70%, hsl(var(--secondary-dark)) 100%);
 
     --radius: 0.75rem;
 
@@ -71,39 +73,39 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Enhanced Gradient & Duotone Dark Mode */
-    --background: 220 30% 4%;
-    --foreground: 60 35% 98%;
+    /* Enhanced 3D Dark Mode */
+    --background: 220 20% 8%;
+    --foreground: 220 5% 98%;
 
-    --card: 220 25% 8%;
-    --card-foreground: 60 30% 96%;
+    --card: 220 15% 14%;
+    --card-foreground: 220 5% 95%;
 
-    --popover: 220 25% 8%;
-    --popover-foreground: 60 30% 96%;
+    --popover: 220 15% 14%;
+    --popover-foreground: 220 5% 95%;
 
-    /* Enhanced duotone colors for dark mode */
-    --primary: 25 100% 65%;
-    --primary-foreground: 220 30% 4%;
-    --primary-light: 35 100% 80%;
-    --primary-dark: 15 100% 50%;
+    /* Enhanced 3D colors for dark mode */
+    --primary: 210 45% 60%;
+    --primary-foreground: 220 20% 8%;
+    --primary-light: 210 50% 70%;
+    --primary-dark: 210 40% 50%;
 
-    --secondary: 220 95% 70%;
-    --secondary-foreground: 220 30% 4%;
-    --secondary-light: 230 95% 85%;
-    --secondary-dark: 210 95% 55%;
+    --secondary: 25 35% 55%;
+    --secondary-foreground: 220 20% 8%;
+    --secondary-light: 25 40% 65%;
+    --secondary-dark: 25 30% 45%;
 
-    --muted: 220 20% 15%;
-    --muted-foreground: 60 20% 80%;
+    --muted: 220 10% 22%;
+    --muted-foreground: 220 5% 75%;
 
-    --accent: 280 75% 75%;
-    --accent-foreground: 220 30% 4%;
+    --accent: 260 30% 65%;
+    --accent-foreground: 220 20% 8%;
 
-    --destructive: 0 90% 70%;
-    --destructive-foreground: 220 30% 4%;
+    --destructive: 0 65% 60%;
+    --destructive-foreground: 220 20% 8%;
 
-    --border: 220 25% 22%;
-    --input: 220 30% 12%;
-    --ring: 25 100% 65%;
+    --border: 220 10% 35%;
+    --input: 220 15% 12%;
+    --ring: 210 45% 60%;
     
     --sidebar-background: 220 25% 8%;
     --sidebar-foreground: 60 30% 96%;
