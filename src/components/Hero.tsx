@@ -2,6 +2,7 @@ import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
+  // Force refresh - your portfolio content should display properly
   const getCurrentDateTime = () => {
     const now = new Date();
     return now.toLocaleString('en-US', {
