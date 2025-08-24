@@ -73,17 +73,24 @@ export default {
 				'gradient-button': 'var(--gradient-button)',
 				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-subtle': 'var(--gradient-subtle)',
-				'gradient-3d': 'var(--gradient-3d)'
+				'gradient-retro': 'var(--gradient-retro)',
+				'gradient-vintage': 'var(--gradient-vintage)'
 			},
 			boxShadow: {
-				'3d-soft': 'var(--shadow-3d-soft)',
-				'3d-medium': 'var(--shadow-3d-medium)',
-				'3d-deep': 'var(--shadow-3d-deep)',
-				'3d-inset': 'var(--shadow-3d-inset)',
-				'3d-raised': 'var(--shadow-3d-raised)'
+				'retro-soft': 'var(--shadow-retro-soft)',
+				'retro-medium': 'var(--shadow-retro-medium)',
+				'retro-deep': 'var(--shadow-retro-deep)',
+				'retro-glow': 'var(--shadow-retro-glow)',
+				'retro-inset': 'var(--shadow-retro-inset)',
+				'soft': '0 2px 4px rgba(139, 69, 19, 0.1)',
+				'medium': '0 4px 8px rgba(139, 69, 19, 0.15)',
+				'large': '0 8px 16px rgba(139, 69, 19, 0.2)',
+				'glow': '0 0 20px rgba(255, 140, 0, 0.3)'
 			},
 			fontFamily: {
-				'inter': ['Inter', 'sans-serif']
+				'inter': ['Inter', 'sans-serif'],
+				'retro': ['Courier New', 'monospace'],
+				'vintage': ['Georgia', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -125,12 +132,24 @@ export default {
 						transform: 'translateY(-10px)'
 					}
 				},
-				'3d-hover': {
+				'retro-glow': {
 					'0%': {
-						transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)'
+						boxShadow: '0 0 5px rgba(255, 140, 0, 0.3)',
+						transform: 'scale(1)'
 					},
 					'100%': {
-						transform: 'perspective(1000px) rotateX(-5deg) rotateY(5deg) translateZ(20px)'
+						boxShadow: '0 0 20px rgba(255, 140, 0, 0.6), 0 0 30px rgba(255, 140, 0, 0.4)',
+						transform: 'scale(1.02)'
+					}
+				},
+				'retro-pulse': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.8',
+						transform: 'scale(0.98)'
 					}
 				}
 			},
@@ -139,7 +158,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'float': 'float 3s ease-in-out infinite',
-				'3d-hover': '3d-hover 0.3s ease-out forwards'
+				'retro-glow': 'retro-glow 0.4s ease-out forwards',
+				'retro-pulse': 'retro-pulse 2s ease-in-out infinite'
 			}
 		}
 	},
