@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Professional theme colors */
+    --background: 220 25% 8%;
+    --foreground: 210 20% 95%;
+    --card: 220 15% 10%;
+    --card-foreground: 210 20% 95%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 210 100% 60%;
+    --primary-foreground: 220 25% 8%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 210 20% 95%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 210 10% 60%;
+    --accent: 220 15% 15%;
+    --accent-foreground: 210 20% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 95%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 210 100% 60%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom professional styles */
+.content-row {
+  @apply text-foreground ml-5;
+}
+
+.poster-grid {
+  @apply flex overflow-x-auto overflow-y-hidden px-5 py-4 scrollbar-hide;
+}
+
+.poster-item {
+  @apply w-full object-contain max-h-24 mr-3 transition-transform duration-300 hover:scale-105 rounded-md shadow-lg;
+}
+
+.poster-large {
+  @apply max-h-60 hover:scale-103;
+}
+
+.hero-banner {
+  @apply bg-cover bg-center text-foreground object-contain relative;
+  height: 448px;
+  background-image: url('/images/banner.jpg');
+}
+
+.hero-content {
+  @apply ml-8 pt-36 h-48;
+}
+
+.hero-title {
+  @apply text-5xl font-bold pb-2;
+}
+
+.hero-description {
+  @apply w-full max-w-md leading-relaxed pt-4 text-sm;
+}
+
+.hero-button {
+  @apply cursor-pointer text-foreground outline-none border-none font-bold rounded-sm px-8 mr-4 py-2 bg-secondary/50 hover:bg-accent hover:text-accent-foreground transition-all duration-200;
+}
+
+.hero-fade {
+  @apply mt-36 h-32;
+  background-image: linear-gradient(180deg, transparent, hsl(var(--background) / 0.6), hsl(var(--background)));
+}
+
+.navbar {
+  @apply fixed top-0 w-full flex justify-between items-center px-5 py-4 z-50 transition-all duration-500;
+}
+
+.navbar-scrolled {
+  @apply bg-background/95 backdrop-blur-sm;
+}
+
+.nav-logo {
+  @apply w-20 object-contain;
+}
+
+.nav-avatar {
+  @apply w-8 object-contain rounded-full;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
